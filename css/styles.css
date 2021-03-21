@@ -143,7 +143,6 @@ header {
 }
 /* Шапка */
 .cap {
-  background: var(--bg-color);
   text-align: center;
 
   padding-top: 200px;
@@ -275,7 +274,7 @@ header {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 /* Футер */
 .footer {
@@ -385,4 +384,61 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--title-color);
+}
+
+/* Декоративные-элементы */
+
+/* .contact-img-envelope::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/decor/envelope.svg);
+} */
+
+/* .contact-img-phone::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+   outline: 1px solid red;
+} */
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/decor/main-img.svg);
+  background-color: #c4c4c4;
+}
+
+.features-item::before {
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-img-antenna::before {
+  background-image: url(../images/decor/antenna.svg);
+}
+.features-img-clock::before {
+  background-image: url(../images/decor/clock.svg);
+}
+.features-img-diagram::before {
+  background-image: url(../images/decor/diagram.svg);
+}
+.features-img-astronaut::before {
+  background-image: url(../images/decor/astronaut.svg);
 }
