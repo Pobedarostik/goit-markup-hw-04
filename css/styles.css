@@ -141,12 +141,14 @@ header {
   width: 1px !important;
   overflow: hidden;
 }
-/* Шапка */
-.cap {
-  text-align: center;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+/* Шапка */
+
+.cap {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  text-align: center;
 }
 
 .cap-title {
@@ -234,13 +236,18 @@ header {
 
 /* Наша команда */
 .team {
+  max-width: 1600px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5f4fa;
 }
 
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .team-card {
@@ -253,7 +260,8 @@ header {
 }
 
 .team-card:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   flex-basis: calc((100% - 90px) / 4);
 }
 
@@ -275,6 +283,32 @@ header {
   letter-spacing: 0.03em;
   color: var(--title-color);
   margin-bottom: 16px;
+}
+/* Наши клиенты */
+.client {
+  text-align: center;
+}
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.client-title {
+  margin-bottom: 50px;
+}
+
+.client-item {
+  width: 160px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 15px;
+  margin-left: 15px;
+  flex-basis: calc((100% - 150px) / 6);
 }
 /* Футер */
 .footer {
@@ -387,27 +421,35 @@ header {
 }
 
 /* Декоративные-элементы */
+.contact-img-envelope {
+  display: inline-flex;
+  align-items: center;
+}
 
-/* .contact-img-envelope::before {
-  display: inline-block;
+.contact-img-envelope::before {
   content: "";
   width: 16px;
   height: 12px;
   margin-right: 10px;
   background-image: url(../images/decor/envelope.svg);
-} */
+  background-repeat: no-repeat;
+}
 
-/* .contact-img-phone::before {
-  display: inline-block;
+.contact-img-phone {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-img-phone::before {
   content: "";
   width: 10px;
   height: 16px;
   margin-right: 10px;
-   outline: 1px solid red;
-} */
+  background-image: url(../images/decor/smartphone.svg);
+  background-repeat: no-repeat;
+}
 
 .overlay {
-  height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -418,6 +460,7 @@ header {
     ),
     url(../images/decor/main-img.svg);
   background-color: #c4c4c4;
+  background-position: center;
 }
 
 .features-item::before {
