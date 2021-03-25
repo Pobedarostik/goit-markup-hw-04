@@ -131,6 +131,32 @@ header {
   display: flex;
 }
 
+.contact-link-icon {
+  display: flex;
+  align-items: center;
+}
+
+.link-icon-envelope {
+  width: 16px;
+  height: 12px;
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.link-icon-smartphone {
+  width: 10px;
+  height: 16px;
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.contact-link-icon:hover .link-icon-envelope,
+.contact-link-icon:focus .link-icon-envelope,
+.contact-link-icon:hover .link-icon-smartphone,
+.contact-link-icon:focus .link-icon-smartphone {
+  fill: #2196f3;
+}
+
 .hidden-title {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -176,6 +202,20 @@ header {
   border-radius: 4px;
 }
 
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/decor/svg/main-img.svg);
+  background-color: #c4c4c4;
+  background-position: center;
+}
+
 /* Особенности */
 
 .features-list {
@@ -208,6 +248,29 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--title-color);
+}
+
+.features-item::before {
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-img-antenna::before {
+  background-image: url(../images/decor/svg/antenna.svg);
+}
+.features-img-clock::before {
+  background-image: url(../images/decor/svg/clock.svg);
+}
+.features-img-diagram::before {
+  background-image: url(../images/decor/svg/diagram.svg);
+}
+.features-img-astronaut::before {
+  background-image: url(../images/decor/svg/astronaut.svg);
 }
 
 /* Чем мы занимаемся */
@@ -284,7 +347,43 @@ header {
   color: var(--title-color);
   margin-bottom: 16px;
 }
+
+.social-icons {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+.social-icon-item + .social-icon-item {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.social-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #2196f3;
+}
+.social-link:hover .icon,
+.social-link:focus .icon {
+  fill: #fff;
+}
+
 /* Наши клиенты */
+
 .client {
   text-align: center;
 }
@@ -298,19 +397,39 @@ header {
   margin-bottom: 50px;
 }
 
-.client-item {
-  width: 160px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-}
-
 .client-item:not(:last-child) {
   margin-right: 15px;
   margin-left: 15px;
   flex-basis: calc((100% - 150px) / 6);
 }
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-link-icon {
+  width: 44px;
+  height: 50px;
+  fill: #afb1b8;
+}
+
+.client-link:hover .client-link-icon,
+.client-link:focus .client-link-icon {
+  fill: #2196f3;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: #2196f3;
+}
+
 /* Футер */
+
 .footer {
   background: var(--bg-color);
 
@@ -318,15 +437,19 @@ header {
   padding-bottom: 60px;
 }
 .footer .container {
-  display: block;
+  display: flex;
+}
+
+.footer-main {
+  flex-basis: calc((50%-45px) / 2);
 }
 .footer-logo {
-  display: block;
+  display: inline-flex;
   margin-bottom: 20px;
 }
 
 .address {
-  display: block;
+  display: flex;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -338,11 +461,60 @@ header {
   display: block;
 }
 .address-mail {
-  display: block;
+  display: flex;
   margin-bottom: 9px;
 }
 
+.footer-social-links {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--two-main-color);
+  flex-basis: calc((50%-45px) / 2);
+  margin-top: 12px;
+}
+
+.footer-title {
+  margin-bottom: 20px;
+}
+
+.footer-link .footer-title {
+  margin-bottom: 20px;
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.footer-icons .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: #2196f3;
+}
+
 /* Страница портфолио */
+
 .portfolio {
   text-align: center;
 }
@@ -373,6 +545,8 @@ header {
 .button:focus {
   color: var(--two-main-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -380,6 +554,11 @@ header {
   flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item {
@@ -418,70 +597,4 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--title-color);
-}
-
-/* Декоративные-элементы */
-.contact-img-envelope {
-  display: inline-flex;
-  align-items: center;
-}
-
-.contact-img-envelope::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/decor/envelope.svg);
-  background-repeat: no-repeat;
-}
-
-.contact-img-phone {
-  display: inline-flex;
-  align-items: center;
-}
-
-.contact-img-phone::before {
-  content: "";
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../images/decor/smartphone.svg);
-  background-repeat: no-repeat;
-}
-
-.overlay {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/decor/main-img.svg);
-  background-color: #c4c4c4;
-  background-position: center;
-}
-
-.features-item::before {
-  display: block;
-  content: "";
-  margin-bottom: 30px;
-  height: 120px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.features-img-antenna::before {
-  background-image: url(../images/decor/antenna.svg);
-}
-.features-img-clock::before {
-  background-image: url(../images/decor/clock.svg);
-}
-.features-img-diagram::before {
-  background-image: url(../images/decor/diagram.svg);
-}
-.features-img-astronaut::before {
-  background-image: url(../images/decor/astronaut.svg);
 }
