@@ -137,15 +137,11 @@ header {
 }
 
 .link-icon-envelope {
-  width: 16px;
-  height: 12px;
   fill: #757575;
   margin-right: 10px;
 }
 
 .link-icon-smartphone {
-  width: 10px;
-  height: 16px;
   fill: #757575;
   margin-right: 10px;
 }
@@ -368,8 +364,6 @@ header {
 }
 
 .social-icons .icon {
-  width: 20px;
-  height: 20px;
   fill: #afb1b8;
 }
 
@@ -414,8 +408,6 @@ header {
 }
 
 .client-link-icon {
-  width: 44px;
-  height: 50px;
   fill: #afb1b8;
 }
 
@@ -503,8 +495,6 @@ header {
 }
 
 .footer-icons .icon {
-  width: 20px;
-  height: 20px;
   fill: #fff;
 }
 
