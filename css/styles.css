@@ -60,6 +60,12 @@ a {
   margin-bottom: 0;
 }
 
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
 .web,
 .studio {
   font-family: Raleway;
