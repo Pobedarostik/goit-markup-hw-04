@@ -252,27 +252,15 @@ header {
   color: var(--title-color);
 }
 
-.features-item::before {
-  display: block;
-  content: "";
-  margin-bottom: 30px;
+.features-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
+  background: #f5f4fa;
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.features-img-antenna::before {
-  background-image: url(../images/decor/svg/antenna.svg);
-}
-.features-img-clock::before {
-  background-image: url(../images/decor/svg/clock.svg);
-}
-.features-img-diagram::before {
-  background-image: url(../images/decor/svg/diagram.svg);
-}
-.features-img-astronaut::before {
-  background-image: url(../images/decor/svg/astronaut.svg);
+  margin-bottom: 30px;
 }
 
 /* Чем мы занимаемся */
@@ -311,13 +299,12 @@ header {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -30px;
 }
 
 .team-card {
   background: #ffffff;
-  width: 270px;
+  max-width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -325,8 +312,8 @@ header {
 }
 
 .team-card:not(:last-child) {
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 30px;
+
   flex-basis: calc((100% - 90px) / 4);
 }
 
@@ -387,19 +374,20 @@ header {
 .client {
   text-align: center;
 }
+
 .client-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  max-width: 1170px;
+  margin-right: -30px;
 }
+
 .client-title {
   margin-bottom: 50px;
 }
 
 .client-item:not(:last-child) {
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 30px;
   flex-basis: calc((100% - 150px) / 6);
 }
 
